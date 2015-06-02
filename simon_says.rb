@@ -18,3 +18,12 @@ end
 def start_of_word(string, num)
   return string[0,num]
 end
+
+def first_word(string)
+  array = string.strip.split
+  return array[0]
+end
+
+def titleize(string)
+  return string.strip.split.map { |e| e.capitalize }.join(' ')
+end
