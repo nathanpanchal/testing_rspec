@@ -5,6 +5,6 @@ def translate(word)
     return letters.push("ay").join
   else
     letters.push(letters[0], 'ay').shift
-    letters.join
+    return letters.join
   end
 end
