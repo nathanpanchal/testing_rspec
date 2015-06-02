@@ -14,3 +14,7 @@ def repeat(string, num = 'not specified')
   end
   array.join(' ')
 end
+
+def start_of_word(string, num)
+  return string[0,num]
+end
