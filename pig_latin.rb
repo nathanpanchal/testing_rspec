@@ -1,4 +1,4 @@
-def translate(word)
+def to_pig_latin(word)
   vowels = ['a', 'e', 'i', 'o', 'u']
   letters = word.split(//)
   until vowels.include?(letters[0])
@@ -9,4 +9,12 @@ def translate(word)
     end
   end
   letters.push('ay').join
+end
+
+def to_words(string)
+  return string.strip.split(' ')
+end
+
+def translate(string)
+  words = to_words(string)
 end
