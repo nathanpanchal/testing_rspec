@@ -8,7 +8,7 @@ def to_pig_latin(word)
       letters.push(letters[0]).shift
     end
   end
-  letters.push('ay').join
+  return letters.push('ay').join
 end
 
 def to_words(string)
@@ -17,4 +17,8 @@ end
 
 def translate(string)
   words = to_words(string)
+  words.map do |word|
+    to_pig_latin(word)
+  end
+  words.join(' ')
 end
