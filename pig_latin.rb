@@ -17,8 +17,8 @@ end
 
 def translate(string)
   words = to_words(string)
-  words.map do |word|
+  words.map! do |word|
     to_pig_latin(word)
   end
-  words.join(' ')
+  return words.join(' ')
 end
