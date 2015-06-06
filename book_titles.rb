@@ -1,11 +1,14 @@
 class Book
-  def initialize(title)
+
+  attr_accessor :title
+
+  def initialize(title='')
     @title = title
   end
 
-  def title(title)
+  def title
     exceptions = ['a', 'an', 'and', 'in', 'of', 'the']
-    words = string.split(' ')
+    words = @title.split(' ')
     words.each do |word|
       if exceptions.include?(word) && word != words[0]
       else
@@ -15,7 +18,4 @@ class Book
     return words.join(' ')
   end
 
-  def title
-    @title
-  end
 end
