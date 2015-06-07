@@ -1,7 +1,9 @@
 class Timer
 
-  def initialize
-    @seconds = 0
+  attr_accessor :seconds
+
+  def initialize(seconds=0)
+    @seconds = seconds
   end
 
   def seconds
@@ -25,6 +27,11 @@ class Timer
     else
       return num.to_s
     end
+  end
+
+  def time_string
+    puts @seconds
+    return '00:00:00'
   end
 
 end
